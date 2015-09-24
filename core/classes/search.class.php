@@ -27,52 +27,7 @@ class Search extends DB{
         self::openDB();
         global $connection;
 
-        $query = $connection->prepare(" SELECT id, name FROM customers WHERE
-
-                                        id LIKE '".$s."%' OR
-                                        name LIKE '".$s."%' OR
-                                        email LIKE '".$s."%' OR
-                                        phone LIKE '".$s."%' OR
-                                        address LIKE '".$s."%' OR
-                                        complement LIKE '".$s."%' OR
-                                        cep LIKE '".$s."%' OR
-                                        idnumber LIKE '".$s."%'
-
-                                        UNION ALL
-
-                                        SELECT id, name FROM products WHERE
-                                        id LIKE '".$s."%' OR
-                                        name LIKE '".$s."%' OR
-                                        ref LIKE '".$s."%'
-
-                                        UNION ALL
-
-                                        SELECT id, name FROM products_categories WHERE
-                                        id LIKE '".$s."%' OR
-                                        name LIKE '".$s."%'
-
-                                        UNION ALL
-
-                                        SELECT id, name FROM products_taxes WHERE
-                                        id LIKE '".$s."%' OR
-                                        name LIKE '".$s."%' OR
-                                        value LIKE '".$s."%'
-
-                                        UNION ALL
-
-                                        SELECT id, name FROM products_suppliers WHERE
-                                        id LIKE '".$s."%' OR
-                                        name LIKE '".$s."%' OR
-                                        email LIKE '".$s."%' OR
-                                        phone LIKE '".$s."%'
-
-                                        UNION ALL
-
-                                        SELECT id, name FROM users WHERE
-                                        id LIKE '".$s."%' OR
-                                        name LIKE '".$s."%' OR
-                                        email LIKE '".$s."%'
-                                        ");
+        $query = $connection->prepare("");
         $query->execute();
         $return = $query->fetchAll();
 
