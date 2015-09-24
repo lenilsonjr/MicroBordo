@@ -1,0 +1,33 @@
+body {
+	background: url("../images/bg4.png")!important;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Nav-bar top
+*/
+.navbar {
+  height: 52px;
+  border-bottom: 2.5px solid orange;
+  background-color: #3C3636;
+}
+
+.navbar > a {
+	color: #ffffff;
+	margin-top: 5px;
+	font-size: 2em;
+	text-decoration: none;
+	cursor: default;
+}
+
+/*
+ * Panel of login
+*/
+.panel-default {
+	margin-top: 50%;
+}
+
+.shadow1 {
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+}
