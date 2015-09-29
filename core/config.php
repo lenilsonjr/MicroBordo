@@ -25,8 +25,8 @@ class Config {
     //DATA-BASE ACCESS
     const DATABASE_BASE = 'microbordo';
     const DATABASE_HOST = 'localhost';
-    const DATABASE_USER = 'root';
-    const DATABASE_PASS = 'aquiehbrasil';
+    const DATABASE_USER = 'YOUR USER';
+    const DATABASE_PASS = 'YOUR PASS';
 
     //SYSTEM BASE URL
     const BASE_INSTALATION_URL = "http://127.0.0.2/";

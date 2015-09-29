@@ -59,7 +59,7 @@ require_once($_SERVER["DOCUMENT_ROOT"] . '/core/core.php');
                 </div>
             </div>
         </div>
-        <div id="allPosts" class="col-md-8" style="padding-left:65px; overflow: scroll; height: 670px;">
+        <div id="allPosts" class="col-md-8" style="padding-left:65px; overflow-y: scroll; height: 670px;">
 
 
 
