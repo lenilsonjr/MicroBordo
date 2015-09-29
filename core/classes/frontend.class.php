@@ -83,6 +83,7 @@ Class FrontEnd {
                 "jquery.min.js",
                 "bootstrap.min.js",
                 "bootstrap-tags.js",
+                "elastic.js",
                 //"jasny-bootstrap.min.js",
                 "scripts.js",
                 //"bootstrap-multiselect.js",

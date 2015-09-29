@@ -34,7 +34,7 @@ textarea[disabled] {
     background-color: #ffffff!important;
     padding: 0px!important;
     width: 100%;
-    height: auto;
+    /*height: auto;*/
 }
 
 .alert-danger {

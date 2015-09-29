@@ -26,3 +26,6 @@ foreach ($l as $row): ?>
     </div>
 
 <?php endforeach; ?>
+<script type="text/javascript">
+    $("textarea[disabled]").elastic();
+</script>

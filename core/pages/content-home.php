@@ -70,6 +70,7 @@ require_once($_SERVER["DOCUMENT_ROOT"] . '/core/core.php');
 <script type="text/javascript">
 jQuery(document).ready(function(){
 
+
     $("#allPosts").load('core/pages/content-list-posts.php');
 
     var tags = $("#tags").tags({
@@ -129,5 +130,6 @@ jQuery(document).ready(function(){
             return rex.test($(this).text());
         }).show();
     });
+
 });
 </script>
