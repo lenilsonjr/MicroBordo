@@ -1,3 +1,9 @@
+.post {
+
+    height: auto!important;
+
+}
+
 .modalLoad {
     display:    none;
     position:   fixed;

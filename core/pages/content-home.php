@@ -21,50 +21,51 @@ require_once($_SERVER["DOCUMENT_ROOT"] . '/core/core.php');
 <div class="container-fluid">
     <div class="row">
 
-        <div class="col-md-6 col-md-offset-3">
-
-            <h1 class="text-center text-primary"><?php echo MicroBordo::getBusinessName(); ?></h1>
-
-            <hr>
+        <div class="col-md-4" style="padding-left:65px; padding-right: 65px; background-color: #f5f5f5;">
 
             <div class="row">
 
-                <form id="newPost">
-                    <div class="form-group">
-                        <textarea name="post" class="form-control" placeholder="O que passa pela sua cabeça agora?" rows="8" cols="40"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <div id="tags"></div>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-lg pull-right">Postar!</button>
-                    </div>
-                </form>
+                <h1 class="text-center text-primary"><?php echo MicroBordo::getBusinessName(); ?></h1>
 
-            </div>
+                <hr>
 
-            <hr>
+                <div class="row">
 
-            <div class="row">
+                    <form id="newPost">
+                        <div class="form-group">
+                            <textarea name="post" class="form-control" placeholder="O que passa pela sua cabeça agora?" rows="8" cols="40"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <div id="tags"></div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-lg pull-right">Postar!</button>
+                        </div>
+                    </form>
 
-                <div class="input-group">
-                    <div class="input-group-addon">
-                        <i class="glyphicon glyphicon-search"></i>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Filtrar posts..." id="tagFiltro">
                 </div>
 
+                <hr>
+
+                <div class="row">
+
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Filtrar posts..." id="tagFiltro">
+                    </div>
+
+                </div>
             </div>
-            <div id="allPosts">
+        </div>
+        <div id="allPosts" class="col-md-8" style="padding-left:65px; overflow: scroll; height: 670px;">
 
 
-
-            </div>
 
         </div>
 
     </div>
-
 </div>
 <script type="text/javascript">
 jQuery(document).ready(function(){

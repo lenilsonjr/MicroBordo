@@ -4,7 +4,7 @@ $o = new Posts;
 $l = $o->_list();
 
 foreach ($l as $row): ?>
-    <div class="row post" id="post-<?=$row['id']?>">
+    <div class="post" id="post-<?=$row['id']?>">
 
         <br>
 
