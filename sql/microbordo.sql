@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Tempo de geração: 24/09/2015 às 18:36
+-- Tempo de geração: 30/09/2015 às 16:58
 -- Versão do servidor: 10.0.19-MariaDB
 -- Versão do PHP: 5.6.9
 
@@ -45,6 +45,17 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `tags` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `tags`
+--
+
+CREATE TABLE IF NOT EXISTS `tags` (
+  `id` int(10) NOT NULL,
+  `tag` varchar(60) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 --
 -- Índices de tabelas apagadas
 --
@@ -62,6 +73,12 @@ ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices de tabela `tags`
+--
+ALTER TABLE `tags`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de tabelas apagadas
 --
 
@@ -74,6 +91,11 @@ ALTER TABLE `options`
 -- AUTO_INCREMENT de tabela `posts`
 --
 ALTER TABLE `posts`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de tabela `tags`
+--
+ALTER TABLE `tags`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -33,15 +33,25 @@ class Posts {
 
         if (!empty($data['post'])) {
 
+            $database = new DB;
             $tags_str = '';
 
             foreach ($data['tags'] as $k => $v) {
 
-                $tags_str = $tags_str . $v . '; ';
+                $query = $database->runQuery("SELECT id FROM tags WHERE tag = '".$v."'");
+                if (empty($query)) {
 
+                    $query = $database->runQuery("INSERT INTO tags
+                                                (tag) VALUES
+                                                ('".$v."')", true);
+                    if ($query) {
+                        $query = $database->runQuery("SELECT id FROM tags WHERE tag = '".$v."'");
+                    }
+                }
+
+                $tags_str = $tags_str . $query[0][0] . ',';
             }
 
-            $database = new DB;
             $query = $database->runQuery("INSERT INTO posts
                                 (post, tags) VALUES
                                 ('".$data['post']."', '".$tags_str."')", true);
@@ -124,10 +134,20 @@ class Posts {
     */
     public function tagStrArr($str) {
 
-        $arr = explode("; ", $str);
+        $arr = explode(",", $str);
         unset($arr[count($arr) - 1]);
 
-        return $arr;
+        $out_arr = array();
+        $database = new DB;
+
+        foreach ($arr as $row) {
+
+            $query = $database->runQuery("SELECT tag FROM tags WHERE id = '".$row."'");
+            $out_arr[] = $query[0][0];
+
+        }
+
+        return $out_arr;
     }
 }
 
