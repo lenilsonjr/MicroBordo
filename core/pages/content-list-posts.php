@@ -27,5 +27,17 @@ foreach ($l as $row): ?>
 
 <?php endforeach; ?>
 <script type="text/javascript">
-    $("textarea[disabled]").elastic();
+    $(document).ready(function(){
+        $("textarea[disabled]").elastic();
+
+        $(".ptag").click(function(){
+
+            var rex = new RegExp($(this).find(".pntag").text(), 'i');
+            $('.post').hide();
+            $('.post').filter(function () {
+                return rex.test($(this).find(".pntag").text());
+            }).show();
+
+        });
+    });
 </script>

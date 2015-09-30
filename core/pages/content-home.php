@@ -113,16 +113,6 @@ jQuery(document).ready(function(){
         return false;
     });
 
-    $(".ptag").click(function(){
-
-        var rex = new RegExp($(this).find(".pntag").text(), 'i');
-        $('.post').hide();
-        $('.post').filter(function () {
-            return rex.test($(this).find(".pntag").text());
-        }).show();
-
-    });
-
     $('#tagFiltro').keyup(function () {
         var rex = new RegExp($(this).val(), 'i');
         $('.post').hide();
