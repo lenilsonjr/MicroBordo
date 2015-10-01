@@ -25,7 +25,7 @@ require_once($_SERVER["DOCUMENT_ROOT"] . '/core/core.php');
 
             <div class="row">
 
-                <h1 class="text-center text-primary"><?php echo MicroBordo::getBusinessName(); ?></h1>
+                <h1 class="text-center text-primary logo"><?php echo MicroBordo::getBusinessName(); ?></h1>
 
                 <hr>
 

@@ -1,3 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400);
+
+.logo {
+
+    font-family: 'Oswald', sans-serif;
+
+}
+
 .post {
 
     height: auto!important;
