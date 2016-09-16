@@ -1,15 +1,15 @@
 # MicroBordo
 MicroBordo is a small software to help people get notes and thoughts into "paper", organized by tags.
-Is like a private Twitter.
+It's like a private Twitter.
 
-**Some things needs to be improved:**
+**To-do:**
 - Improve security;
 - Solve some bugs;
 - Apply "good practices" into the code;
 - Improve design.
 
 ## How it works?
-This session is under construction...
+Come back other day...
 
 ## How can I contribute?
-This session is under construction...
+You already know how to do it.
